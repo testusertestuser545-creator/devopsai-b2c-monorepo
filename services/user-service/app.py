@@ -25,11 +25,17 @@ def parse_token(token: str):
 
 @app.get("/healthz")
 def healthz():
-    return jsonify({"status": "ok", "service": "user-service", "env": ENVIRONMENT})
+    return jsonify({"status": "ok1", "service": "user-service", "env": ENVIRONMENT})
 
 @app.get("/env")
 def env():
     return jsonify({"env": ENVIRONMENT})
+@app.get("/who-is-the-king")
+def who_is_the_king():
+    return jsonify({"msg": "who-is-the-king> king is Yaron"})
+    
+
+
 
 @app.post("/register")
 def register():
